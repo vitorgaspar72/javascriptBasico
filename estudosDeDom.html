@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="pt-br">
+        <meta charset="UTF -8">
+        <title>Estudos de DOM</title>
+
+    </head>
+
+    <body>
+        <h1>O DOM é árvore hierárquica de objetos do javascript</h1>
+        <p >Vitor <strong>Gabriel</strong></p><br>
+        <p >Maria Leni</p>
+
+
+        
+
+    
+
+        <script>
+            var nome;
+            var corpo = document.body
+            nome=document.getElementsByTagName('p') [0]; //o vetor seleciona o primeiro paragrafo
+            document.write(nome.innerText); // escreve o texto referente a variavel, sem ediçao do HTML, apenas o texto em si
+            document.write("<br>"+nome.innerHTML); // escreve o texto referente a variavel, exatamente como está escrito no html, com estilos
+            
+            corpo.style.background= '#f0f0f0'; //muda o estilo da tag
+
+            nome.style.fontFamily='Times New Roman';
+            nome.style.textDecoration='Underline';
+            nome.style.color='#84f087';
+
+
+        </script>
+
+
+        <div id="away">Javascript moderno</div>
+
+        <script>
+        /*    var nome= document.getElementById('away'); // atribui a uma variavel o valor de uma tag, método tradicional
+           nome.innerText='Javascript com typescrypt';  // substitui o escrito na tag pelo id
+        */
+
+            var nome= document.querySelector('div#away'); // Selector moderno, para selecionar por tag, recomendado
+             nome.innerText='Javascript com typescrypt';
+            
+        </script>
+    </body>
+
+</html>

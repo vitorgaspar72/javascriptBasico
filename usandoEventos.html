@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Somando números com eventos</title>
+        <meta lang="pt-BR">
+    </head>
+
+    <body>
+        <h1> Somando números: </h1>
+        
+        <label>Número 1: </label><br>
+        <input type="number" id="txt1" name="txt1" maxlength="5">
+        <br>
+        
+        <label>Número 2:</label><br>
+        <input type="number" id="txt2" name="txt2" maxlength="5">
+
+        <br><br>
+
+       
+
+        <div id="resultado">Resultado</div><br>
+        <input type="button"  value="somar" onclick="somar()" >
+
+        <script>
+          
+            
+
+           
+            function somar(){
+                var texto1= document.querySelector('input#txt1');
+                var texto2= document.querySelector('input#txt2');
+                var n1= Number.parseInt(texto1.value);
+                var n2= Number.parseInt(texto2.value);
+                var n3=n1+n2;
+                var resultado= document.getElementById('resultado');
+                resultado.innerHTML=`A soma entre ${n1} e ${n2} é ${n3}`;
+            }
+
+
+        </script>
+    </body>
+</html>

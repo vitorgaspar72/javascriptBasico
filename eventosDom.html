@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta lang="pt-BR"> 
+       <meta charset="UTF -8">
+       <title>Eventos DOM</title>
+       
+
+    </head>
+    <body>
+        <h1>Eventos DOM são relacionados ao mouse nas tags</h1>
+        <style>
+            div#area {
+                background-color: #f59aa3;
+                color: #000;
+                text-align: center;
+                font: italic 10pt Arial;
+                line-height: 250px;
+                width: 250px;
+                height: 250px;
+                border-radius:10px;
+              
+            }
+            .large{
+                transform: scale(1.5);
+                transition: 1.5s;
+
+            }
+
+        </style>
+       <!--  <div id="area" onclick="clicar()" onmouseenter="enter()" onmouseout="out()">Teste de evento DOM</div> 
+                 NEsse metodo o html fica grande e com visual não agradavel
+        -->
+        <div id="area" >Teste de evento DOM</div> 
+        <script>
+            var interacao= document.querySelector('div#area');
+            
+            interacao.addEventListener('dblclick', function (e) {
+            interacao.classList.toggle('large');
+            });
+
+            interacao.addEventListener('click',clicar);
+            interacao.addEventListener('mouseenter',enter);
+            interacao.addEventListener('mouseout',out);
+
+
+            function clicar(){
+              
+                interacao.innerText='Parabéns, você clicou!';
+                interacao.style.background='blue';
+         
+                
+            }
+
+            function enter(){
+                interacao.innerText='Entrou';
+                interacao.style.background='green';
+                interacao.style.display='Teste';
+            }
+
+            function out(){
+                interacao.innerText='Saiu!';
+                interacao.style.background=' #f59aa3';
+            }
+
+           
+            
+
+
+
+            
+            
+        </script>
+
+       
+
+        
+
+    </body>
+
+
+</html>
